@@ -1,0 +1,27 @@
+<div class="eval-header">
+  <div class="row">
+    <div class="col col-12 col-md-6">
+      @@if (!bilan) {
+        <a href="evalues.html" class="btn btn-outline-primary">
+          <i data-feather="chevron-left" class="float-start"></i>
+          Retour évalués
+        </a>
+      }
+      @@if (bilan) {
+        <div class="eval-header--logo">
+          <img src="assets/logos/ensemble-logos.png">
+        </div>
+      }
+    </div>
+    <div class="col col-12 col-md-6">
+      <h3>Entretien professionnel 2021 @@if (bilan) { (synthèse) }</h3>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal">
+        Loraine Albert
+      </a>
+      @@if (bilan) {
+        <br>
+        <a href="mailto:loraine.albert@domain.fr">loraine.albert@domain.fr</a>
+      }
+    </div>
+  </div>
+</div>

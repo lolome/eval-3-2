@@ -1,0 +1,41 @@
+// -----------------------------------------
+//  EVAL HEADER
+// - - - - - - - - - - - - - - - - - - - - -
+
+.eval-header,
+.postit-header {
+
+  // outline: 1px dotted #f00;
+
+  margin-bottom: 2rem;
+
+  .col {
+
+    margin-bottom: 1rem;
+    align-self: center;
+
+  }
+
+  h3 {
+
+    margin: 0;
+
+    font-weight: 300;
+
+  }
+
+  &--logo {
+
+    //
+
+    img, svg {
+
+      width: 100%;
+      max-width: 480px;
+      max-height: 100px;
+
+    }
+
+  }
+
+}

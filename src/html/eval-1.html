@@ -1,0 +1,41 @@
+@@include('--app-partials/header.html', {
+  "title": "ENTRETIEN : EV@L 3",
+  "bodyClass": "eval"
+})
+
+<main class="app-main">
+  <div class="app-content">
+
+    <forn>
+
+      @@include('--eval-partials/commons/header.html', {
+        "bilan": false
+      })
+
+      @@include('--eval-partials/commons/nav.html', {
+        "title": "Informations collaborateur et manager",
+        "page": 1
+      })
+
+      <div class="eval-content">
+
+        @@include('--common-partials/alert.html', {
+          "type": "warning",
+          "dismissible": false,
+          "text": "La fiche de poste de l'agent doit être jointe à la convocation à l'entretien (Article 6 du Décret)."
+        })
+
+        @@include('--eval-partials/page-1/row-1.html')
+
+      </div>
+
+      @@include('--eval-partials/commons/footer.html', {
+        "page": 1
+      })
+
+    </forn>
+
+  </div>
+</main>
+
+@@include('--app-partials/footer.html')

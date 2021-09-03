@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- https://medium.com/swlh/are-you-using-svg-favicons-yet-a-guide-for-modern-browsers-836a6aace3df -->
+    <link rel="icon" href="assets/icons/favicon.svg">
+    <link rel=”mask-icon” href="assets/icons/favicon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TODO: GOOGLE FONTS ??? -->
+
+    <!-- APP STYLES -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/dropzone.css">
+    <link rel="stylesheet" href="assets/css/vars.css">
+    <link rel="stylesheet" href="assets/css/custom-1.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/commons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/eval.css">
+    <link rel="stylesheet" href="assets/css/eval-show.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/print.css">
+
+    <title>ENTRETIEN : EV@L 3</title>
+
+  </head>
+
+	<body class="eval">
+
+    <div class="app">
+
+      <header class="app-header">
+        <div class="elt-container">
+
+          <div class="app-infos">
+            <a href="/" class="app-logo"></a>
+            <a href="/" class="app-name">
+              <img src="assets/logos/eval-post-it-logo.svg">
+            </a>
+          </div>
+
+          <div class="app-user d-none d-sm-block">
+            Jean-Christophe Stevenson
+          </div>
+
+          <a href="/" class="app-home">
+            <i data-feather="home"></i>
+            <span>Accueil</span>
+          </a>
+
+          <a class="btn app-menu-toggler" data-bs-toggle="offcanvas" href="#app-menu" role="button" aria-controls="app-menu">
+            <i data-feather="menu"></i>
+            <span>Menu</span>
+          </a>
+
+        </div>
+      </header>
+
+      <div id="app-menu" class="offcanvas offcanvas-end app-menu" tabindex="-1" aria-labelledby="app-menu-label">
+
+        <div class="offcanvas-header">
+          <h5 id="app-menu-label" class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+
+          <section class="offcanvas-section user-name-section d-sm-none">
+            <i data-feather="user"></i>
+            Jean-Christophe Stevenson
+          </section>
+
+          <section class="offcanvas-section nav-section">
+            <div class="user-search">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                  <i data-feather="search"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Chercher une personne" aria-label="Chercher une personne" aria-describedby="button-search">
+                <button class="btn btn-secondary" type="button" id="button-search" data-bs-dismiss="offcanvas">
+                  <!-- <i data-feather="search"></i> -->
+                  Chercher
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- <section class="offcanvas-section nav-section">
+            <div class="section-title">
+              Navigation
+            </div>
+            <ul class="section-menu">
+              <li>
+                <a class="dropdown-item text-truncate active" href="/">
+                  <i data-feather="home"></i>
+                  Accueil
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="/">
+                  <i data-feather="chevron-right"></i>
+                  Page 2
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="/">
+                  <i data-feather="chevron-right"></i>
+                  Page 3
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="/">
+                  <i data-feather="chevron-right"></i>
+                  Page 4
+                </a>
+              </li>
+            </ul>
+          </section> -->
+
+          <section class="offcanvas-section help-section">
+            <div class="section-title">
+              Aide
+            </div>
+            <ul class="section-menu">
+              <li>
+                <a class="dropdown-item text-truncate" href="#" data-bs-toggle="modal" data-bs-target="#help-modal-1" data-bs-dismiss="offcanvas">
+                  <i data-feather="help-circle"></i>
+                  Questions fréquentes de l'évalué
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="#" data-bs-toggle="modal" data-bs-target="#help-modal-2" data-bs-dismiss="offcanvas">
+                  <i data-feather="help-circle"></i>
+                  Questions fréquentes du responsable
+                </a>
+              </li>
+              <!-- <li>
+                <hr class="dropdown-divider">
+              </li> -->
+              <li>
+                <a class="dropdown-item text-truncate" href="contact.html">
+                  <i data-feather="mail"></i>
+                  Contacter le support
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="offcanvas-section user-section">
+            <div class="section-title">
+              Utilisateur
+            </div>
+            <ul class="section-menu">
+              <li>
+                <a class="dropdown-item text-truncate" href="#" data-bs-toggle="modal" data-bs-target="#password-modal" data-bs-dismiss="offcanvas">
+                  <i data-feather="lock"></i>
+                  Modifier mot de passe
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="login.html">
+                  <i data-feather="log-out"></i>
+                  Déconnexion
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="offcanvas-section dev-section">
+            <div class="section-title">
+              Developpement
+            </div>
+            <ul class="section-menu">
+              <li>
+                <a class="dropdown-item text-truncate" href="#" data-bs-toggle="modal" data-bs-target="#tester-modal" data-bs-dismiss="offcanvas">
+                  <i data-feather="user"></i>
+                  Changer le testeur
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="typography.html">
+                  <i data-feather="type"></i>
+                  Typographie
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="buttons.html">
+                  <i data-feather="toggle-right"></i>
+                  Boutons, labels …
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="#" data-bs-dismiss="offcanvas">
+                  <i data-feather="code"></i>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </a>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+      </div>
+
+
+
+<main class="app-main">
+  <div class="app-content">
+
+    <div class="eval-header">
+  <div class="row">
+    <div class="col col-12 col-md-6">
+      
+      
+        <div class="eval-header--logo">
+          <img src="assets/logos/ensemble-logos.png">
+        </div>
+      
+    </div>
+    <div class="col col-12 col-md-6">
+      <h3>Entretien professionnel 2021  (synthèse) </h3>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal">
+        Loraine Albert
+      </a>
+      
+        <br>
+        <a href="mailto:loraine.albert@domain.fr">loraine.albert@domain.fr</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <div class="eval-content">
+
+      <h1>Informations collaborateur et manager</h1>
+      <section>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3>Évalué</h3>
+            <table class="table table-sm border-top">
+              <tr>
+                <th><small>Nom</small></th>
+                <td>Albert</td>
+              </tr>
+              <tr>
+                <th><small>Prénom</small></th>
+                <td>Rémy</td>
+              </tr>
+              <tr>
+                <th><small>Matricule</small></th>
+                <td>5433</td>
+              </tr>
+              <tr>
+                <th><small>Date de naissance</small></th>
+                <td>14/01/1975</td>
+              </tr>
+              <tr>
+                <th><small>Filière</small></th>
+                <td>Filière technique</td>
+              </tr>
+              <tr>
+                <th><small>DGA</small></th>
+                <td>DGVE</td>
+              </tr>
+              <tr>
+                <th><small>Direction</small></th>
+                <td>Dir. Envirron. Planif. Spatial espaces naturels</td>
+              </tr>
+              <tr>
+                <th><small>Service</small></th>
+                <td>Service Gestion et développement espaces naturels</td>
+              </tr>
+              <tr>
+                <th><small>Catégorie</small></th>
+                <td>A</td>
+              </tr>
+              <tr>
+                <th><small>Echelon</small></th>
+                <td>05</td>
+              </tr>
+              <tr>
+                <th><small>Grade</small></th>
+                <td>Ingénieur Principal</td>
+              </tr>
+              <tr>
+                <th><small>Situation statutaire</small></th>
+                <td>Titulaire</td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="col-12 col-md-6">
+            <h3>Responsable</h3>
+            <table class="table table-sm border-top">
+              <tr>
+                <th><small>Nom</small></th>
+                <td>SYNA1</td>
+              </tr>
+              <tr>
+                <th><small>Prénom</small></th>
+                <td>Pascal</td>
+              </tr>
+              <tr>
+                <th><small>Matricule</small></th>
+                <td>SYNACOM1</td>
+              </tr>
+              <tr>
+                <th><small>Email</small></th>
+                <td>benoit.etb@gmail.com</td>
+              </tr>
+              <tr>
+                <th><small>Filière</small></th>
+                <td>Filière technique</td>
+              </tr>
+              <tr>
+                <th><small>DGA</small></th>
+                <td>DGVE</td>
+              </tr>
+              <tr>
+                <th><small>Direction</small></th>
+                <td>Direction Ecologie Urbaine</td>
+              </tr>
+              <tr>
+                <th><small>Service</small></th>
+                <td>Régie Collecte des déchets</td>
+              </tr>
+              <tr>
+                <th><small>Fonction</small></th>
+                <td>AGENTE/AGENT DE COLLECTE</td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+      </section>
+
+      <h1>1 - Description du poste occupé par le collaborateur</h1>
+      <section>
+        <div class="row">
+          <div class="col col-12 col-md-3 align-self-md-center">
+            <label class="form-label mb-md-0">Date d’affectation</label>
+          </div>
+          <div class="col col-12 col-md-9">
+            <div class="form-control eval-response">
+              01/01/2019
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-12">
+            <label class="form-label">Missions du poste<br>
+            <span class="custom-color-primary mb-2">Merci de saisir ci-dessous, les missions principales liées à la fonction de l’agent.</span></label>
+            <div class="form-control eval-response">
+              Soluptatetur re, aped eossim ius entotatiscit estint asi seque maioreh endersperum sitam ipsum quia vel mo quae ni sit aute eaquibus.<br>Dia eliat dunti sin rem. Bus sus maximpore poreribus, simustrum simus eos ius modigni minimodi volest, nos elitio debis conecatecta as re, aut re is rem ne reped utest.<br>Ut ellorec totaectiae ratio ex endae dendae de nam faceriberum nem quo blatia qui dolectatiat es del enestiusanim aliqui vellorp orporepro is inctem id et esciis que et eat.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>2 - Faits marquants de l’année écoulée</h1>
+      <section>
+        <h2>Dossiers</h2>
+        <div class="crud-box">
+
+          <div class="crud-box-header">
+            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+          </div>
+
+          <div class="crud-box-body">
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-1" class="form-label">
+                  Nature des dossiers ou travaux
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat.<br>
+                  Uciam volorrum quiae pliberibus magnissunte pelecaepro beatectis molesto dissin et veriatis si blandae ommolor epudio esti sed que eum, conem.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-2" class="form-label">
+                  Résultats obtenus
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Adipisicing
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-3" class="form-label">
+                  Explication des écarts
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Arum, offictas serat autasita con eaquam repelendis vel magnim vellab in coriam ius qui beri odignatum restorrovid magniss imusda quate culpa cor apicipsuntio ipis essinve.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-4" class="form-label">
+                  Commentaires
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Arum, offictas serat autasita con eaquam repelendis vel magnim vellab in coriam ius qui beri odignatum restorrovid magniss imusda quate culpa cor apicipsuntio ipis essinve.<br>
+                  Nem aciisitisit ad magnimpor aut volorum eos aut exerum nossum dit doloratus aut andes eaquo demoditiaes ut quaestium et fugia secto qui quiati od ullaborum etur, qui nonem.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="crud-box">
+          <div class="crud-box-body">
+            <div class="row">
+              <div class="col">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <h1>3 - Analyse des objectifs individuels et collectifs</h1>
+      <section>
+
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Bilan de l’année écoulée</label>
+            <div class="form-control eval-response">
+              Dia eliat dunti sin rem. Bus sus maximpore poreribus, simustrum simus eos ius modigni minimodi volest, nos elitio debis conecatecta as re, aut re is rem ne reped utest, ut ellorec totaectiae ratio ex endae dendae de nam faceriberum nem quo blatia qui dolectatiat es del enestiusanim aliqui vellorp orporepro is inctem id et esciis que et eat.
+            </div>
+          </div>
+        </div>
+
+        <h2>Résultats professionnels obtenus, réalisation des objectifs</h2>
+
+        <h3 class="mb-0">Objectifs liés à l’activité du service</h3>
+        <p>Objectifs donnés lors de l’évaluation 2020 et remontés automatiquement - lien avec le projet de service</p>
+
+        <div class="crud-box">
+
+          <div class="crud-box-body">
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Intitulé
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Udandamusda ent ate aut as ium essuntium inis
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Moyens et conditions de mise en œuvre : (moyens humains, matériel, formation …)
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat. Uciam volorrum quiae pliberibus magnissunte pelecaepro beatectis molesto dissin et veriatis si blandae ommolor epudio esti sed que eum, conem.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Indicateurs et échéances : (conditions de réussite, délais de réalisation...)
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Cus velest ulparibus ut volore, erspis consed quamentum, numet quae nihiciis exero eos esciam cum la verro te cullaboris as sitae lici diorupti andis unt ad quam que sunt.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Délai de réalisation (mois)
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  11
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Délai de réalisation (année)
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  2021
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Avis agent
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Arum, offictas serat autasita con eaquam repelendis vel magnim vellab in coriam ius qui beri odignatum restorrovid magniss imusda quate culpa cor apicipsuntio ipis essinve.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Niveau de réalisation
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Atteint
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label class="form-label">
+                  Commentaires
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  <span class="text-muted"><em>Non renseigné</em></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <h3 class="mb-0">Objectifs liés à l’activité du service (non prévus)</h3>
+        <label class="form-label">Objectifs donnés lors de l’évaluation 2020 et remontés automatiquement - lien avec le projet de service</label>
+        <div class="form-control eval-response">
+          <span class="text-muted"><em>Non renseigné</em></span>
+        </div>
+
+        <h3 class="mb-0">Objectifs liés aux compétences de l’agent</h3>
+        <label class="form-label">Objectifs donnés lors de l’évaluation 2020 et remontés automatiquement - lien avec les compétences propres de l’agent.</label>
+        <div class="form-control eval-response">
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <h2>Objectifs ou réalisations complémentaires pris en charge en cours d’année, difficultés rencontrées...</h2>
+
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Eléments et avis agent<br>
+            <span class="custom-color-primary">Tout autre élément de l’année écoulée à souligner.</span></label>
+            <div class="form-control eval-response">
+              Bus sus maximpore poreribus, simustrum simus eos ius modigni minimodi volest, nos elitio debis conecatecta as re, aut re is rem ne reped utest, ut ellorec totaectiae ratio ex endae dendae de nam faceriberum nem quo blatia qui dolectatiat.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Eléments et avis évaluateur<br>
+            <span class="custom-color-primary">Réactions et compléments vis-à-vis des apports de l’agent.</span></label>
+            <div class="form-control eval-response">
+              Soluptatetur re, aped eossim ius entotatiscit estint asi seque maioreh endersperum sitam ipsum quia vel mo quae ni sit aute eaquibus.<br>
+              Dia eliat dunti sin rem. Bus sus maximpore poreribus, simustrum simus eos ius modigni minimodi volest, nos elitio debis conecatecta as re, aut re is rem ne reped utest, ut ellorec totaectiae ratio.
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <h1>4 - Appréciation générale de la valeur professionnelle</h1>
+      <section>
+        <h3 class="mb-0">Aptitudes relationnelles</h3>
+        <p>Savoirs être</p>
+
+        <div class="border rounded-3 overflow-hidden mb-5">
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-1" class="form-label">Fait preuve d’assertivité et d’aptitudes de négociation</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat volorrum quiae pliberibus magnissunte pelecaepro beatectis molesto.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 1
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-2" class="form-label">Fait preuve de leadership et de charisme</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Henet excepratiur rat. Tur, corem quam reris in eatur simet, am, corupta tioriantius dolorep erferum aut velessit.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  N/A
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            ...
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-3" class="form-label">Sait s’adapter aux demandes des élus</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Modi to temoluptae quam, od quam qui accaes.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 4
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-4" class="form-label">Autres</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat volorrum quiae pliberibus magnissunte pelecaepro beatectis molesto.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 2
+                </div>
+              
+              
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="mb-0">Compétences professionnelles / managériales</h3>
+        <p>Savoirs faire</p>
+
+        <div class="border rounded-3 overflow-hidden  mb-5">
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-5" class="form-label">Définit une stratégie globale en cohérence avec le projet politique</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat volorrum quiae pliberibus magnissunte pelecaepro beatectis.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 3
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-6" class="form-label">Anticipe et conduit les changements nécessaires, en donnant du sens</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Henet excepratiur rat. Tur, corem quam reris in eatur simet, am, corupta tioriantius dolorep erferum aut velessit.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 5
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            ...
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-7" class="form-label">Suit, évalue et ajuste son mode de délégation</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  N/A
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-8" class="form-label">Met en œuvre les techniques de communication institutionnelle</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Git is dollenim andi aut ipsum nobiti tem iliciist expellu ptasse net, nonsectem endit molupta conseditae sum re cusdae. Iqui ut at re re pera delloritium fugit quist.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 1
+                </div>
+              
+              
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="mb-0">Connaissances opérationnelles / expertises</h3>
+        <p>Savoirs</p>
+
+        <div class="border rounded-3 overflow-hidden">
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-9" class="form-label">Maîtrise les enjeux et les leviers de pilotage d’une communauté d’agglomération</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Ribusaer ferferibus et quatur re nosto mossimu sdantibusae verferum doluptae prorum nullaborum, occaerepta volorento inimus magnat volorrum quiae pliberibus magnissunte pelecaepro beatectis moles.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  N/A
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-10" class="form-label">Maîtrise l’environnement territorial et ses enjeux</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  <span class="text-muted"><em>Non renseigné</em></span>
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 1
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            ...
+          </div>
+
+          <div class="row px-4 py-3 mb-0 border-bottom">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-11" class="form-label">Maîtrise les techniques de mobilisation d’équipe</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  <span class="text-muted"><em>Non renseigné</em></span>
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  Valeur 3
+                </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="row px-4 py-3 mb-0">
+            <div class="col col-12 col-lg-3">
+              <label for="X6-12" class="form-label">Maitrise les techniques/outils du pilotage de projet</label>
+            </div>
+            <div class="col col-12 col-lg-6">
+              
+                <div class="form-control eval-response">
+                  Cum culles eratemo ditaquas et etur re dolentore.
+                </div>
+              
+              
+            </div>
+            <div class="col col-12 col-lg-3 mt-3 mt-lg-0">
+              
+                <div class="form-control eval-response">
+                  N/A
+                </div>
+              
+              
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <h1>...</h1>
+
+      <h1>8 - Perspectives d’évolution professionnelle</h1>
+      <section>
+        <div class="row">
+          <div class="col col-12 col-md-3 align-self-md-center">
+            <label class="form-label mb-md-0">L’agent souhaite-t’il une évolution professionnelle ?</label>
+          </div>
+          <div class="col col-12 col-md-9">
+            <div class="form-control eval-response">
+              Non
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>9 - Conclusions de l’entretien</h1>
+      <section>
+
+        <div class="row">
+          <div class="col col-12">
+            <label class="form-label">Appréciation générale sur la valeur professionnelle du collaborateur</label>
+            <div class="form-control eval-response">
+              Soluptatetur re, aped eossim ius entotatiscit estint asi seque maioreh endersperum sitam ipsum quia vel mo quae ni sit aute eaquibus.<br>
+              Dia eliat dunti sin rem. Bus sus maximpore poreribus, simustrum simus eos ius modign.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12">
+            <label class="form-label">Avis de l’agent sur la qualité de l’échange et/ou les différents sujets</label>
+            <div class="form-control eval-response">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12">
+            <label class="form-label">Avis de l’encadrant sur la qualité de l’échange</label>
+            <div class="form-control eval-response">
+              Ab ius ipsanda estiaturia ex earitate ipidelenient dit am ut volor sitam labor si velleseque doluptatiis ilibus, volorero quam, explamus sitiscipsus asim fuga. Magnimet volor aut qui ad ut qui temqui autatur sundand ioratiae porenduciat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12">
+            <label class="form-label">Résumer en quelques mots votre avis sur la valeur professionnelle de l’agent, en fonction du niveau de l’atteinte des objectifs et des conclusions du bilan des compétences</label>
+            <div class="form-control eval-response">
+              Ab ius ipsanda estiaturia ex earitate ipidelenient dit am ut volor sitam labor si velleseque doluptatiis ilibus, volorero quam, explamus sitiscipsus asim fuga. Magnimet volor aut qui ad ut qui temqui autatur sundand ioratiae porenduciat.<br>
+              Pis eturem quodignatur aborem arciis excesequis ulla cusandi stionsequae vel ium eicatam, intiore net fugia nullend aepudae velland.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12 mb-3 col-md-4 mb-md-0 col-lg-6">
+            <label class="form-label">Lieu de l’entretien</label>
+            <div class="form-control eval-response">
+              Paris
+            </div>
+          </div>
+          <div class="col col-12 mb-3 col-md-4 mb-md-0 col-lg-3">
+            <label class="form-label">Date de convocation</label>
+            <div class="form-control eval-response">
+              07/07/2021
+            </div>
+          </div>
+          <div class="col col-12 mb-3 col-md-4 mb-md-0 col-lg-3">
+            <label class="form-label">Date de l’entretien</label>
+            <div class="form-control eval-response">
+              22/07/2021
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="eval-footer">
+      <div class="row">
+        <div class="col-6">
+          <a href="eval-1.html" class="btn btn-outline-primary">
+            <i data-feather="chevron-left" class="float-start"></i>
+            Retour
+          </a>
+        </div>
+        <div class="col-6 text-end">
+          <a href="/" class="btn btn-primary">
+            <i data-feather="check-square" class="float-start"></i>
+            Valider
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+      <footer class="app-footer">
+        <div class="elt-container">
+
+          <span>Powered by <a href="https://synacom.fr/" target="_blank">synacom.fr</a></span>
+
+          <ul class="dev-nav">
+            <li>
+              <a href="login.html">Identification</a>
+            </li>
+            <!-- <li>
+              <a href="/">Accueil</a>
+            </li> -->
+            <li>
+              <a href="eval-1.html">Entretien</a>
+            </li>
+            <!-- <li>
+              <a href="eval-1.html">Entretien 2</a>
+            </li> -->
+            <!-- <li>
+              <a href="typography.html">Typo</a>
+            </li> -->
+            <!-- <li>
+              <a href="/">index</a>
+            </li> -->
+            <li>
+              <a href="email.html">email</a>
+            </li>
+            <li class="ps-3">
+              <span class="badge bg-danger d-sm-none">XS</span>
+              <span class="badge bg-warning d-none d-sm-inline d-md-none">SM</span>
+              <span class="badge bg-secondary d-none d-md-inline d-lg-none">MD</span>
+              <span class="badge bg-primary d-none d-lg-inline d-xl-none">LG</span>
+              <span class="badge bg-info d-none d-xl-inline d-xxl-none">XL</span>
+              <span class="badge bg-success d-none d-xxl-inline">XXL</span>
+            </li>
+          </ul>
+
+        </div>
+      </footer>
+
+    </div>
+
+    <div class="down-up-btns">
+
+      <a href="#" class="down-btn">
+        <i data-feather="chevron-down"></i>
+      </a>
+
+      <a href="#" class="up-btn">
+        <i data-feather="chevron-up"></i>
+      </a>
+
+    </div>
+
+
+    <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="user-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="user"></i>
+            <h4 class="modal-title ms-2" id="user-modal-label">
+              Jean-Christophe Stevenson
+            </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <ul class="nav nav-tabs" id="user-tabs" role="tablist">
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="campagnes-tab" data-bs-toggle="tab" data-bs-target="#campagnes" type="button" role="tab" aria-controls="campagnes" aria-selected="true">Campagnes en cous</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="historique-tab" data-bs-toggle="tab" data-bs-target="#historique" type="button" role="tab" aria-controls="historique" aria-selected="false">Historique</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="informations-tab" data-bs-toggle="tab" data-bs-target="#informations" type="button" role="tab" aria-controls="informations" aria-selected="false">Informations</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="documents-tab" data-bs-toggle="tab" data-bs-target="#documents" type="button" role="tab" aria-controls="documents" aria-selected="false">Documents</button>
+              </li>
+
+            </ul>
+
+            <div class="tab-content border border-top-0 p-3 rounded-bottom" id="user-tabs-contents">
+
+              <div class="tab-pane fade show active" id="campagnes" role="tabpanel" aria-labelledby="campagnes-tab">
+
+                <h3 class="mt-2 mb-0">Entretien Professionnel</h3>
+                <p>
+                  <small class="text-muted"><em>Cap en cours</em></small>
+                </p>
+
+                <h3 class="mt-2 mb-0">Fiche de Poste</h3>
+                <p class="mt-2">
+                  <a href="#" class="btn btn-outline-primary">
+                    <i data-feather="eye" class="float-start"></i>
+                    Voir
+                  </a>
+                  <a href="evalues.html" class="btn btn-outline-primary">
+                    <i data-feather="printer" class="float-start"></i>
+                    Imprimer
+                  </a>
+                </p>
+
+                <h3 class="mt-2 mb-0">Entretien CAP</h3>
+                <p>
+                  <small class="text-muted"><em>Pas commencé</em></small>
+                </p>
+
+              </div>
+
+              <div class="tab-pane fade" id="historique" role="tabpanel" aria-labelledby="historique-tab">
+
+                <h3 class="mt-2 mb-0">Entretiens professionnels</h3>
+                <p>
+                  <small class="text-muted"><em>NA</em></small>
+                </p>
+
+                <h3 class="mt-2 mb-0">Fiche de poste</h3>
+                <p>
+                  <small class="text-muted"><em>NA</em></small>
+                </p>
+
+                <h5 class="mt-3">Entretiens 2020 PATS</h5>
+                <div>
+                  <h6>EVAL-PATS-2019-PATS</h6>
+                  <ul>
+                    <li>
+                      <a href="#">Entretien professionnel (version validée)</a>
+                    </li>
+                    <li>
+                      <a href="#">Entretien CAP (version validée)</a>
+                    </li>
+                    <li>
+                      <a href="#">Entretien CAP (version téléchargée)</a>
+                    </li>
+                  </ul>
+                  <h6>EVAL-PATS-2018-PATS</h6>
+                  <ul>
+                    <li>
+                      <a href="#">Entretien professionnel (version validée)</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="informations" role="tabpanel" aria-labelledby="informations-tab">
+
+                <h3 class="mb-0">Informations ...</h3>
+                <p>
+                  <small class="text-muted"><em>NA</em></small>
+                </p>
+
+              </div>
+
+              <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+
+                <h3 class="mb-0">Documents ...</h3>
+                <p>
+                  <small class="text-muted"><em>NA</em></small>
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="help-modal-1" tabindex="-1" aria-labelledby="help-modal-1-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="help-circle"></i>
+            <h4 class="modal-title ms-2" id="help-modal-1-label">Questions fréquentes de l'évalué</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <h5>Doluptatur solupta tquiaes enia cus quidelit ?</h5>
+            <p>Ata adit vendant velention estibus, officias as volorib eaquis soloris eiunto corrore roremperore quias ut plitibusae. Sed quatium ut liquata tempero vitatur? Or renem quostia vel modis reseque voluptaspe doloribus eius que voluptatur? Hendesequam im faccuptate consequ ossime as volupiendis et resedit atibus, comnimodis earum fugit inim voluptatem estrupt aquam, quas am, as elest, nimos eictatur sit aut moluptius, unt que nimpor sumque ium auta consequi debisinvel ipiciae quiat acculpa rcipsa si sectur sustio optatiu sdantur alit aut explici sam doluptat as etur, sit ad es et exceped ulla arum sitistrum labo. Ut omnihitat.</p>
+
+            <h5>Cate nobiti blandebit enda dolumquunt plitaqu untiorp orepudi gentis exerentem lam quo mo coremporio esequiatat ?</h5>
+            <p>Es a que volorest as magnatius moditat.<br>
+            Xerum net od que ium estint quam vernatibus autendero int.<br>
+            Cae pliquas pelicient volorepti iditis aut pos mos dus, corem a dis prae.<br> Nequam exceati ustrum il is sam, que aute verit, nulparumquis ut es apero mint ipsa pos ea consecab ipsaper uptatus delique pa apelessit maiorum inci consed qui blaut pressen istrum versperiorum fugiti sunt.</p>
+
+            <h5>Tem is aperitaest, conem lam sinullut que sequis necati none nisciur ?</h5>
+            <p>Doloriat lam quist, ex expersperrum fuga. Si numquid eum fugia voluptatur, odit ulpa dicimpore eossinctis doluptatio blabori tibusa quam, cusa plibus as est plaut laut ut ea non nis qui berae. Caeriae rcimint velesci cullupidemos et, quis invenda ntotat magnam fuga. Itas eat.</p>
+
+            <h5>Git est ad quis nobis aceaquid que int la velit explatis aut lis atur ?</h5>
+            <p>Cuptatur adiores tiistorentem apis dolenis simaximus in rendis endam cusant. Ibus commost, sequi re dolupta muscit omnihilles quis anducimin pe cus quis discidit que in enimint hiliquas plignimus sitatiis volut et modis as aut quid quisimusae volorpo rumenderrum, corentem aute con reic tecto blacerumet ellaudae eos nobite vit aborrum facid maione volupta teniass itiore volor ressi officit que comniet veliataerae placiur, utatium qui corent perit essimod magnatem endipsus et quam, cones adi delique od moluptat vel is evelessit il inctusam quid quia sum quas aut faciet laciae dolest, ullaborum facest, con plic tent everecab iur aut et ex es unt que re nos adis et dita alis debiscilit quam, sequi omniet quae et atem se sit oditatiunt, sitam, as perum faccatent.</p>
+
+            <h5>Niminullia assum inum faceaqu aepudaecto molorepellut ?</h5>
+            <p>Alis in et aliquatus ut apicabo. Itatus, volorero blabor restia nem fugit, sit ellanim res et ellaborrum ea ipsusam, ius, id molum hiliquidus porenim rem consequis ilibus eatinci isitis consecust odi sint rero cus.</p>
+
+            <h5>Rempore pelit, eiusam qui nustem consequisque maximos ?</h5>
+            <p>Que imus aut endam quam, occus, tem quiantiati debis pelenis ipsamen ditatur rem apicabo repudam hil molo volorum elluptate volum es ate dolorae exceatur?<br>
+            Dame es doluptatis experspit, consequunt, offic tem ut autae rem is quis dolorenis eaquam et offici dolentio veniendi cum facientiat.<br>
+            Ebiscii stiisit lab idescim rate num ulparcipis de pliquia dundell estiis volenes toratis rerite dolorunt, qui cus.</p>
+
+            <h5>Xero dolupti atusam nihilla quid qui doluptum ?</h5>
+            <p>Aute que pratiis ciusapedi ad et, qui venditium aut aut quam restiam ea core, sit ea quatur moluptatius, sum ellautemo eos si ut alicidestes evelis eriscia audici occatiunti ut as eos et dem idus.<br>
+            Dunt eum resequis eatur sinctiistium natiore icabore debitam ustiat rehenis magnam aut lab incimo molorep editiosa ipicil ma dolecabo. Ne vollectem rem es anducimus.</p>
+
+            <h5>Nequidusa dit veritium reprorum eius conse volorumquo ea es rero te nobiteniet, aboratibus etus serro mi ?</h5>
+            <p>Omnihicient, ommo quate ventiam, optati optatiostis reiciduciti doluptiis est eius as ilit labo. Es rem deraturem volorerspedi voluptaquo consedis ut officid quo ditium ape acepro disciduscias esedit, officat harum ratis doluptiat maximoluptas dolorione alicit fuga. Ed mil eum entotatae nis molupta simaximenda quas coremporiam rectin remod expero quodi ommodiorunt rem faccatur? Quibusda volorep udicia cum con pa ipid maiorerrum quassitatur seque pelignatatia si ut officitatem facit re volupta sperferferum est aut as ut.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="help-modal-2" tabindex="-1" aria-labelledby="help-modal-2-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="help-circle"></i>
+            <h4 class="modal-title ms-2" id="help-modal-2-label">Questions fréquentes du responsable</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <h5>Doluptatur solupta tquiaes enia cus quidelit ?</h5>
+            <p>Ata adit vendant velention estibus, officias as volorib eaquis soloris eiunto corrore roremperore quias ut plitibusae. Sed quatium ut liquata tempero vitatur? Or renem quostia vel modis reseque voluptaspe doloribus eius que voluptatur? Hendesequam im faccuptate consequ ossime as volupiendis et resedit atibus, comnimodis earum fugit inim voluptatem estrupt aquam, quas am, as elest, nimos eictatur sit aut moluptius, unt que nimpor sumque ium auta consequi debisinvel ipiciae quiat acculpa rcipsa si sectur sustio optatiu sdantur alit aut explici sam doluptat as etur, sit ad es et exceped ulla arum sitistrum labo. Ut omnihitat.</p>
+
+            <h5>Cate nobiti blandebit enda dolumquunt plitaqu untiorp orepudi gentis exerentem lam quo mo coremporio esequiatat ?</h5>
+            <p>Es a que volorest as magnatius moditat.<br>
+            Xerum net od que ium estint quam vernatibus autendero int.<br>
+            Cae pliquas pelicient volorepti iditis aut pos mos dus, corem a dis prae.<br> Nequam exceati ustrum il is sam, que aute verit, nulparumquis ut es apero mint ipsa pos ea consecab ipsaper uptatus delique pa apelessit maiorum inci consed qui blaut pressen istrum versperiorum fugiti sunt.</p>
+
+            <h5>Tem is aperitaest, conem lam sinullut que sequis necati none nisciur ?</h5>
+            <p>Doloriat lam quist, ex expersperrum fuga. Si numquid eum fugia voluptatur, odit ulpa dicimpore eossinctis doluptatio blabori tibusa quam, cusa plibus as est plaut laut ut ea non nis qui berae. Caeriae rcimint velesci cullupidemos et, quis invenda ntotat magnam fuga. Itas eat.</p>
+
+            <h5>Git est ad quis nobis aceaquid que int la velit explatis aut lis atur ?</h5>
+            <p>Cuptatur adiores tiistorentem apis dolenis simaximus in rendis endam cusant. Ibus commost, sequi re dolupta muscit omnihilles quis anducimin pe cus quis discidit que in enimint hiliquas plignimus sitatiis volut et modis as aut quid quisimusae volorpo rumenderrum, corentem aute con reic tecto blacerumet ellaudae eos nobite vit aborrum facid maione volupta teniass itiore volor ressi officit que comniet veliataerae placiur, utatium qui corent perit essimod magnatem endipsus et quam, cones adi delique od moluptat vel is evelessit il inctusam quid quia sum quas aut faciet laciae dolest, ullaborum facest, con plic tent everecab iur aut et ex es unt que re nos adis et dita alis debiscilit quam, sequi omniet quae et atem se sit oditatiunt, sitam, as perum faccatent.</p>
+
+            <h5>Niminullia assum inum faceaqu aepudaecto molorepellut ?</h5>
+            <p>Alis in et aliquatus ut apicabo. Itatus, volorero blabor restia nem fugit, sit ellanim res et ellaborrum ea ipsusam, ius, id molum hiliquidus porenim rem consequis ilibus eatinci isitis consecust odi sint rero cus.</p>
+
+            <h5>Rempore pelit, eiusam qui nustem consequisque maximos ?</h5>
+            <p>Que imus aut endam quam, occus, tem quiantiati debis pelenis ipsamen ditatur rem apicabo repudam hil molo volorum elluptate volum es ate dolorae exceatur?<br>
+            Dame es doluptatis experspit, consequunt, offic tem ut autae rem is quis dolorenis eaquam et offici dolentio veniendi cum facientiat.<br>
+            Ebiscii stiisit lab idescim rate num ulparcipis de pliquia dundell estiis volenes toratis rerite dolorunt, qui cus.</p>
+
+            <h5>Xero dolupti atusam nihilla quid qui doluptum ?</h5>
+            <p>Aute que pratiis ciusapedi ad et, qui venditium aut aut quam restiam ea core, sit ea quatur moluptatius, sum ellautemo eos si ut alicidestes evelis eriscia audici occatiunti ut as eos et dem idus.<br>
+            Dunt eum resequis eatur sinctiistium natiore icabore debitam ustiat rehenis magnam aut lab incimo molorep editiosa ipicil ma dolecabo. Ne vollectem rem es anducimus.</p>
+
+            <h5>Nequidusa dit veritium reprorum eius conse volorumquo ea es rero te nobiteniet, aboratibus etus serro mi ?</h5>
+            <p>Omnihicient, ommo quate ventiam, optati optatiostis reiciduciti doluptiis est eius as ilit labo. Es rem deraturem volorerspedi voluptaquo consedis ut officid quo ditium ape acepro disciduscias esedit, officat harum ratis doluptiat maximoluptas dolorione alicit fuga. Ed mil eum entotatae nis molupta simaximenda quas coremporiam rectin remod expero quodi ommodiorunt rem faccatur? Quibusda volorep udicia cum con pa ipid maiorerrum quassitatur seque pelignatatia si ut officitatem facit re volupta sperferferum est aut as ut.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="search"></i>
+            <h4 class="modal-title ms-2" id="search-modal-label">
+              Rechercher une personne
+            </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            ...
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="password-modal" tabindex="-1" aria-labelledby="password-modal-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="lock"></i>
+            <h4 class="modal-title ms-2" id="password-modal-label">
+              Modifier mot de passe
+            </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="old-password" class="form-label">Ancien mot de passe</label>
+              <input type="password" class="form-control" id="old-password">
+            </div>
+
+            <div class="mb-3">
+              <label for="new-password" class="form-label">Nouveau mot de passe</label>
+              <input type="password" class="form-control" id="new-password">
+            </div>
+
+            <div class="mb-4">
+              <label for="repeat-password" class="form-label">Confirmation du nouveau mot de passe</label>
+              <input type="password" class="form-control" id="repeat-password">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="help-modal-ex" tabindex="-1" aria-labelledby="help-modal-ex-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="help-circle"></i>
+            <h4 class="modal-title ms-2" id="help-modal-ex-label">Point de vue collaborateur.trice</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Ata adit vendant velention estibus, officias as volorib eaquis soloris eiunto corrore roremperore quias ut plitibusae. Sed quatium ut liquata tempero vitatur? Or renem quostia vel modis reseque voluptaspe doloribus eius que voluptatur? Hendesequam im faccuptate consequ ossime as volupiendis et resedit atibus, comnimodis earum fugit inim voluptatem estrupt aquam, quas am, as elest, nimos eictatur sit aut moluptius, unt que nimpor sumque ium auta consequi debisinvel ipiciae quiat acculpa rcipsa si sectur sustio optatiu sdantur alit aut explici sam doluptat as etur, sit ad es et exceped ulla arum sitistrum labo. Ut omnihitat.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="tester-modal" tabindex="-1" aria-labelledby="tester-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i data-feather="user"></i>
+            <h4 class="modal-title ms-2" id="tester-modal-label">
+              Utilisateurs de test
+            </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <table class="table table-sm table-hover mb-4">
+
+              <thead>
+                <tr>
+                  <th>matricule</th>
+                  <th>testeur</th>
+                  <th>responsable</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr class="align-middle">
+                  <td>SYNACOM1</td>
+                  <td>Pascal SYNA1</td>
+                  <td class="text-muted">SYNACOM1</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="align-middle">
+                  <td>SYNACOM2</td>
+                  <td>Emmanuelle SYNA2</td>
+                  <td class="text-muted">SYNACOM1</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="align-middle">
+                  <td>SYNACOM3</td>
+                  <td>Solène SYNA3</td>
+                  <td class="text-muted">SYNACOM1</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="align-middle">
+                  <td>SYNACOM4</td>
+                  <td>Nessrine SYNA4</td>
+                  <td class="text-muted">SYNACOM2</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="align-middle">
+                  <td>SYNACOM5</td>
+                  <td>David SYNA5</td>
+                  <td class="text-muted">SYNACOM2</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="align-middle">
+                  <td>SYNACOM6</td>
+                  <td>Laëtita SYNA6</td>
+                  <td class="text-muted">SYNACOM2</td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-secondary">
+                      <i data-feather="log-in" class="float-start"></i>
+                      Se connecter
+                    </a>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="clipboard-modal" tabindex="-1" aria-labelledby="clipboard-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title ms-2" id="clipboard-modal-label">Presse papier</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TEMPLATES -->
+
+    <template id="table-alert-icon">
+      <span data-bs-toggle="tooltip" data-bs-placement="top" title="Action requise">
+        <i data-feather="alert-triangle" width="20" height="20" stroke-width="1.5"></i>
+      </span>
+    </template>
+
+    <template id="table-button-print">
+      <button class="btn btn-sm btn-outline-primary">
+        <i data-feather="printer" class="float-start"></i>
+        Imprimer
+      </button>
+    </template>
+
+    <template id="table-button-see">
+      <a href="eval-1.html" class="btn btn-sm btn-outline-secondary">
+        <i data-feather="eye" class="float-start"></i>
+        Voir
+      </a>
+    </template>
+
+    <template id="table-button-create">
+      <a href="eval-1.html" class="btn btn-sm btn-outline-success">
+        <i data-feather="plus-square" class="float-start"></i>
+        Créer
+      </a>
+    </template>
+
+    <template id="table-button-write">
+      <a href="eval-1.html" class="btn btn-sm btn-outline-primary">
+        <i data-feather="edit" class="float-start"></i>
+        Saisir
+      </a>
+    </template>
+
+    <template id="table-dropdown-other">
+      <div class="dropdown d-inline-block">
+        <button id="simpleUID" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Autre
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="simpleUID">
+          <li>
+            <a href="#" class="dropdown-item text-danger">
+              <i data-feather="trash"></i>
+              Vider
+            </a>
+          </li>
+        </ul>
+      </div>
+    </template>
+
+    <template id="table-dropdown-actions">
+      <div class="dropdown d-inline-block">
+        <button id="simpleUID" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <i data-feather="settings"></i>
+          Actions
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="simpleUID">
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="eye"></i>
+              Voir
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="edit"></i>
+              Saisir
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="plus-square"></i>
+              Créer
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="printer"></i>
+              Imprimer
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="download"></i>
+              Télécharger .pdf
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i data-feather="corner-up-left"></i>
+              Rouvrir
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a href="#" class="dropdown-item text-danger">
+              <i data-feather="trash"></i>
+              Vider
+            </a>
+          </li>
+        </ul>
+      </div>
+    </template>
+
+
+    <!-- APP SCRIPTS -->
+
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/dropzone.js"></script>
+    <script src="/assets/js/templater.js"></script>
+    <script src="/assets/js/down-up-btns.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/feather-icons.js"></script>
+    <script src="/assets/js/form-control.js"></script>
+
+  </body>
+
+</html>
+

@@ -1,0 +1,99 @@
+// -----------------------------------------
+//  MIXINS
+// - - - - - - - - - - - - - - - - - - - - -
+
+@import '_mixins/index';
+
+/*
+ * -----------------------------------------
+ *  GLOBAL
+ * - - - - - - - - - - - - - - - - - - - - -
+ */
+
+html {
+
+  // height: 100%;
+
+  // overflow-x: hidden;
+  // overflow-y: visible;
+  // overflow-scrolling: touch;
+  // scroll-behavior: smooth;
+
+  -webkit-tap-highlight-color: rgba(#000, 0);
+	-webkit-text-size-adjust: 100%;
+
+}
+
+body {
+
+  // height: 100%;
+  // overflow: auto;
+
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--TXT);
+
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  @include media-breakpoint-up(lg) {
+
+    font-size: 16px;
+
+  }
+
+}
+
+/*
+ * -----------------------------------------
+ *  APP
+ * - - - - - - - - - - - - - - - - - - - - -
+ */
+
+.app {
+
+  // min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(lg) {
+
+    background-image: var(--CUSTOM-IMAGE-LG, var(--CUSTOM-IMAGE-MD, var(--CUSTOM-IMAGE-SM, var(--CUSTOM-BACK))));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+  }
+
+  @include media-breakpoint-up(xl) {
+
+    background-image: var(--CUSTOM-IMAGE-XL, var(--CUSTOM-IMAGE-LG, var(--CUSTOM-IMAGE-MD, var(--CUSTOM-IMAGE-SM, var(--CUSTOM-BACK)))));
+
+  }
+
+}
+
+// -----------------------------------------
+//  IMPORTS
+// - - - - - - - - - - - - - - - - - - - - -
+
+@import '_partials/app-header.scss';
+@import '_partials/app-menu.scss';
+@import '_partials/app-main.scss';
+@import '_partials/app-footer.scss';
+@import '_partials/containers.scss';
+@import '_partials/down-up-btns.scss';
+
+// -----------------------------------------
+//  FOR DEV
+// - - - - - - - - - - - - - - - - - - - - -
+
+.outlined {
+
+  outline: 1px dotted rgba(#f00, .5);
+
+}

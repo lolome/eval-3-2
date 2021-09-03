@@ -1,0 +1,57 @@
+// -----------------------------------------
+//  EVAL NAV
+// - - - - - - - - - - - - - - - - - - - - -
+
+.eval-nav,
+.postit-nav {
+
+  // outline: 1px dotted #0f0;
+
+  padding: .5rem 0;
+  margin-bottom: 3rem;
+
+  border-top: 1px solid var(--CUSTOM-PRIMARY);
+  border-bottom: 1px solid var(--CUSTOM-PRIMARY);
+
+  .dropdown-toggle {
+
+    display: flex;
+
+    text-decoration: none;
+    white-space: normal;
+
+    &::after {
+      display: none;
+    }
+
+    .feather {
+
+      flex: 0 0 32px;
+      height: 32px;
+      margin-top: .2em;
+
+      background-color: var(--CUSTOM-PRIMARY);
+      color: #FFF;
+
+    }
+
+  }
+
+  h1 {
+
+    flex: 1 1 100%;
+    margin: 0 !important;
+    margin-top: -.1em;
+    padding-left: 1rem;
+
+  }
+
+  .dropdown-menu {
+
+    left: -5px !important;
+
+    box-shadow: 0 .5rem 1rem rgba(#000, .25);
+
+  }
+
+}

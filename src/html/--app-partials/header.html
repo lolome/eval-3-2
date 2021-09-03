@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- https://medium.com/swlh/are-you-using-svg-favicons-yet-a-guide-for-modern-browsers-836a6aace3df -->
+    <link rel="icon" href="assets/icons/favicon.svg">
+    <link rel=”mask-icon” href="assets/icons/favicon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TODO: GOOGLE FONTS ??? -->
+
+    <!-- APP STYLES -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/dropzone.css">
+    <link rel="stylesheet" href="assets/css/vars.css">
+    <link rel="stylesheet" href="assets/css/custom-1.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/commons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/eval.css">
+    <link rel="stylesheet" href="assets/css/eval-show.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/print.css">
+
+    <title>@@title</title>
+
+  </head>
+
+	<body class="@@bodyClass">
+
+    <div class="app">
+
+      <header class="app-header">
+        <div class="elt-container">
+
+          <div class="app-infos">
+            <a href="/" class="app-logo"></a>
+            <a href="/" class="app-name">
+              <img src="assets/logos/eval-post-it-logo.svg">
+            </a>
+          </div>
+
+          <div class="app-user d-none d-sm-block">
+            Jean-Christophe Stevenson
+          </div>
+
+          <a href="/" class="app-home">
+            <i data-feather="home"></i>
+            <span>Accueil</span>
+          </a>
+
+          <a class="btn app-menu-toggler" data-bs-toggle="offcanvas" href="#app-menu" role="button" aria-controls="app-menu">
+            <i data-feather="menu"></i>
+            <span>Menu</span>
+          </a>
+
+        </div>
+      </header>
+
+      @@include('menu.html')

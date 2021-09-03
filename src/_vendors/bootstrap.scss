@@ -1,0 +1,22 @@
+/*
+ * -----------------------------------------
+ *  BOOTSTRAP
+ * - - - - - - - - - - - - - - - - - - - - -
+ */
+
+// $theme-colors: (
+//   'primary': #5191c7,
+//   'secondary': #85a6b4,
+//   'success': #bed662,
+//   'info': #7bd3c4,
+//   'warning': #f7a55f,
+//   'danger': #ff756b
+// );
+//
+// @each $color, $value in $theme-colors {
+//   .swatch-#{$color} {
+//     color: color-yiq($value);
+//   }
+// }
+
+@import 'node_modules/bootstrap/scss/bootstrap';

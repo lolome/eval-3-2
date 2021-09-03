@@ -1,0 +1,224 @@
+@@include('--app-partials/header.html', {
+  "title": "ENTRETIEN : EV@L 3",
+  "bodyClass": "eval"
+})
+
+<main class="app-main">
+  <div class="app-content">
+
+    <forn>
+
+      @@include('--eval-partials/commons/header.html', {
+        "bilan": false
+      })
+
+      @@include('--eval-partials/commons/nav.html', {
+        "title": "2 - Faits marquants de l’année écoulée",
+        "page": 4
+      })
+
+      <div class="eval-content">
+
+        <h2>Dossiers</h2>
+
+        <p>
+          <button class="btn btn-outline-primary">
+            Ajouter
+          </button>
+          <button class="btn btn-outline-primary" disabled>
+            Ajouter depuis une autre évaluation
+          </button>
+        </p>
+
+        <hr class="mt-5 mb-5">
+
+        <h2>Dossiers</h2>
+
+        <div class="crud-box">
+
+          <div class="crud-box-header">
+            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+          </div>
+
+          <div class="crud-box-body">
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-1" class="form-label">
+                  Nature des dossiers ou travaux
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <textarea id="X4-1" class="form-control" rows="5"></textarea>
+                <div class="form-help">
+                  <div class="form-text count-text">
+                    <small>0/800</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-2" class="form-label">
+                  Résultats obtenus
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <select id="X4-2" class="form-select">
+                  <option value="">Lorem ipsum</option>
+                  <option value="">Adipisicing</option>
+                  <option value="">Sed do eiusmod</option>
+                  <option value="">Exercitation ullamco</option>
+                  <option value="">Nulla pariatur</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-3" class="form-label">
+                  Explication des écarts
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <textarea id="X4-3" class="form-control" rows="5"></textarea>
+                <div class="form-help">
+                  <div class="form-text count-text">
+                    <small>0/800</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-4" class="form-label">
+                  Commentaires
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <textarea id="X4-4" class="form-control" rows="5"></textarea>
+                <div class="form-help">
+                  <div class="form-text count-text">
+                    <small>0/800</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="crud-box-footer">
+            <button class="btn btn-sm btn-outline-secondary btn-text">
+              <i data-feather="x" class="float-start"></i>
+              Annuler
+            </button>
+            <button class="btn btn-sm btn-outline-primary btn-text">
+              <i data-feather="save" class="float-start"></i>
+              Enregistrer
+            </button>
+          </div>
+
+        </div>
+
+        <hr class="mt-5 mb-5">
+
+        <h2>Dossiers</h2>
+
+        <div class="crud-box">
+
+          <div class="crud-box-header">
+            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+          </div>
+
+          <div class="crud-box-body">
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-5" class="form-label">
+                  Nature des dossiers ou travaux
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-6" class="form-label">
+                  Résultats obtenus
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Exercitation ullamco
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-7" class="form-label">
+                  Explication des écarts
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12 col-md-3">
+                <label for="X4-8" class="form-label">
+                  Commentaires
+                </label>
+              </div>
+              <div class="col col-12 col-md-9">
+                <div class="form-control eval-response">
+                  <span class="text-muted"><em>Non renseigné</em></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="crud-box-footer">
+            <button class="btn btn-sm btn-outline-danger btn-text">
+              <i data-feather="trash" class="float-start"></i>
+              Supprimer
+            </button>
+            <button class="btn btn-sm btn-outline-primary btn-text">
+              <i data-feather="edit" class="float-start"></i>
+              Modifier
+            </button>
+          </div>
+
+        </div>
+
+        <p>
+          <button class="btn btn-outline-primary">
+            Ajouter
+          </button>
+          <button class="btn btn-outline-primary" disabled>
+            Ajouter depuis une autre évaluation
+          </button>
+        </p>
+
+      </div>
+
+      @@include('--eval-partials/commons/footer.html', {
+        "page": 4
+      })
+
+    </forn>
+
+  </div>
+</main>
+
+@@include('--app-partials/footer.html')

@@ -1,0 +1,31 @@
+/*
+ * -----------------------------------------
+ *  APP VARS
+ * - - - - - - - - - - - - - - - - - - - - -
+ */
+
+:root {
+
+  --WHITE:  #fff;
+  --GRAY-1: #f5f2f2;
+  --GRAY-2: #ebe8e8;
+  --GRAY-3: #dedcdc;
+  --GRAY-4: #cccaca;
+  --GRAY-5: #b2b1b1;
+  --GRAY-6: #807e7e;
+  --GRAY-7: #5c5b5b;
+  --GRAY-8: #403f3f;
+  --GRAY-9: #262626;
+  --BLACK:  #000;
+
+  --TEXT: var(--GRAY-9);
+  --TEXT-DIMED: var(--GRAY-6);
+  --TEXT-MUTED: var(--GRAY-4);
+
+  --BORDER-LIGHT: var(--GRAY-3);
+  --BORDER-MEDIUM: var(--GRAY-5);
+  --BORDER-STRONG: var(--GRAY-7);
+
+  --FORM-BACK: #fcf9f9;
+
+}

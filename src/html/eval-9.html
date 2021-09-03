@@ -1,0 +1,35 @@
+@@include('--app-partials/header.html', {
+  "title": "ENTRETIEN : EV@L 3",
+  "bodyClass": "eval"
+})
+
+<main class="app-main">
+  <div class="app-content">
+
+    <forn>
+
+      @@include('--eval-partials/commons/header.html', {
+        "bilan": false
+      })
+
+      @@include('--eval-partials/commons/nav.html', {
+        "title": "Besoins en formations de professionnalisation (##n##) en lien avec les fonctions occupées par l'agent",
+        "page": 9
+      })
+
+      <div class="eval-content">
+
+        @@include('--eval-partials/page-9/row-1.html')
+
+      </div>
+
+      @@include('--eval-partials/commons/footer.html', {
+        "page": 9
+      })
+
+    </forn>
+
+  </div>
+</main>
+
+@@include('--app-partials/footer.html')

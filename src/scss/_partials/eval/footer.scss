@@ -1,0 +1,29 @@
+// -----------------------------------------
+//  EVAL FOOTER
+// - - - - - - - - - - - - - - - - - - - - -
+
+.eval-footer,
+.postit-footer {
+
+  // outline: 1px dotted #f00;
+
+  margin: 0 0;
+  padding-top: 2rem;
+
+  border-top: 1px solid var(--BORDER-MEDIUM);
+
+  .eval-pagination {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .eval-validation {
+
+    text-align: right;
+
+  }
+
+}

@@ -1,0 +1,58 @@
+// -----------------------------------------
+//  MIXINS
+// - - - - - - - - - - - - - - - - - - - - -
+
+@import '_mixins/index';
+
+/*
+ * -----------------------------------------
+ *  EVAL SHOW
+ * - - - - - - - - - - - - - - - - - - - - -
+ */
+
+.eval .app-content .eval-show,
+.postit .app-content .postit-show {
+
+  .eval-header,
+  .postit-header {
+
+    padding-bottom: 3rem;
+
+    .row {
+      align-items: center;
+    }
+
+  }
+
+  .eval-content,
+  .postit-content {
+
+    //
+
+    .eval-response,
+    .postit-response {
+
+      padding: .375rem .75rem;
+
+      // background-color: var(--CUSTOM-SHOW-RESPONSE-BACK);
+      // border: 1px solid var(--CUSTOM-SHOW-RESPONSE-BORDER);
+
+      background-color: var(--FORM-BACK);
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+
+    }
+
+  }
+
+  .eval-footer,
+  .postit-footer {
+
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+
+    border-top: 1px solid var(--CUSTOM-PRIMARY);
+
+  }
+
+}

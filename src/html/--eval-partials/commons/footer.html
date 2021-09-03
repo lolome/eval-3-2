@@ -1,0 +1,62 @@
+<div class="eval-footer">
+
+  @@if ( evalValidationdError ) {
+
+    <div class="alert alert-danger alert-validation" role="alert">
+      <p>
+        <strong>Le formulaire comporte des erreurs et n’a pas été enresitré.</strong>
+      </p>
+      <ul>
+        <li>
+          Erreur : <a href="#">{{ field }} : {{ detail }}</a>
+        </li>
+        <li>
+          Erreur : <a href="#">{{ field }} : {{ detail }}</a>
+        </li>
+      </ul>
+    </div>
+
+  }
+
+  <div class="row">
+
+    <div class="col">
+      @@if ( page !== 1 ) {
+        <a href="#" class="btn btn-outline-primary" onclick="goPrevPage(@@page)">
+          <i data-feather="chevron-left" class="float-start"></i>
+          Étape précédente
+        </a>
+      }
+    </div>
+
+    <div class="col eval-pagination">
+      <small class="text-muted">
+        @@page/12
+      </small>
+    </div>
+
+    <div class="col eval-validation">
+        <button type="button" class="btn btn-primary" onclick="goNextPage(@@page)">
+          @@if ( page === 1 ) {
+            <i data-feather="chevron-right" class="float-start"></i>
+            Commencer l’évaluation
+          }
+          @@if ( page !== 1 ) {
+            <i data-feather="save" class="float-start"></i>
+            Enregistrer et continuer
+          }
+        </button>
+    </div>
+
+    <script>
+      function goNextPage(current) {
+        window.location.href = 'eval-' + (current + 1) + '.html';
+      }
+      function goPrevPage(current) {
+        window.location.href = 'eval-' + (current - 1) + '.html';
+      }
+    </script>
+
+  </div>
+
+</div>

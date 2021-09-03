@@ -1,0 +1,37 @@
+@@include('--app-partials/header.html', {
+  "title": "ENTRETIEN : EV@L 3",
+  "bodyClass": "eval"
+})
+
+<main class="app-main">
+  <div class="app-content">
+
+    <forn>
+
+      @@include('--eval-partials/commons/header.html', {
+        "bilan": false
+      })
+
+      @@include('--eval-partials/commons/nav.html', {
+        "title": "7 - Conclusions de l'entretien",
+        "page": 11
+      })
+
+      <div class="eval-content">
+
+        @@include('--eval-partials/page-11/row-1.html')
+
+        @@include('--eval-partials/page-11/row-2.html')
+
+      </div>
+
+      @@include('--eval-partials/commons/footer.html', {
+        "page": 11
+      })
+
+    </forn>
+
+  </div>
+</main>
+
+@@include('--app-partials/footer.html')

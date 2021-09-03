@@ -1,0 +1,132 @@
+// -----------------------------------------
+//  APP HEADER
+// - - - - - - - - - - - - - - - - - - - - -
+
+.app-header {
+
+  flex: 0 0 64px;
+  display: flex;
+
+  background-color: var(--WHITE);
+  border-bottom: 1px solid var(--BORDER-LIGHT);
+
+  @include media-breakpoint-up(lg) {
+
+    flex: 0 0 100px;
+
+  }
+
+  .app-infos {
+
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    height: 100%;
+
+  }
+
+  .app-logo {
+
+    width: 32px;
+    height: 32px;
+    margin-right: 1.5rem;
+
+    background-color: var(--GRAY-3);
+
+    @include media-breakpoint-up(md) {
+      // margin-right: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+
+      width: 160px;
+      height: 64px;
+      margin-right: 2rem;
+
+    }
+
+  }
+
+  .app-name {
+
+    width: 180px;
+    height: 100%;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+
+    border-left: 1px solid #ccc;
+
+    @include media-breakpoint-up(md) {
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 240px;
+      padding-left: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+
+  .app-user {
+
+    flex: 0 0 auto;
+    margin-left: auto;
+
+  }
+
+  .app-home {
+
+    flex: 0 0 auto;
+    margin-left: 1.25rem;
+
+    text-decoration: none;
+
+    color: var(--TXT);
+
+    .feather {
+
+      stroke-width: 1.5;
+
+    }
+
+  }
+
+  .app-menu-toggler {
+
+    flex: 0 0 auto;
+    margin-left: 1rem;
+    padding-left: .375rem;
+    padding-right: .375rem;
+    display: flex;
+    align-items: center;
+
+    .feather {
+
+      margin-right: .5rem;
+
+    }
+
+    @include media-breakpoint-up(md) {
+
+      .feather {
+
+        width: 28px;
+        height: 28px;
+        // margin-right: .5rem;
+
+        stroke-width: 1.5;
+
+      }
+
+    }
+
+  }
+
+}

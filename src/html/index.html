@@ -1,0 +1,71 @@
+@@include('--app-partials/header.html', {
+  "title": "HOME : EV@L 3",
+  "bodyClass": "home"
+})
+
+<main class="app-main">
+  <div class="app-content">
+
+
+    <h1>Mon espace personnel</h1>
+
+    @@include('--common-partials/alert.html', {
+      "type": "warning",
+      "dismissible": false,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    })
+
+    @@include('--common-partials/user-tabs.html')
+
+    <h1>Mon espace responsable</h1>
+
+    <h2>
+      <i data-feather="eval"></i>
+      Entretien professionnel 2021
+    </h2>
+
+    <p>
+      <a href="evalues.html" class="btn btn-outline-primary">
+        <i data-feather="chevron-right" class="float-start"></i>
+        Gérer mes convocations
+      </a>
+      <a href="evalues.html" class="btn btn-outline-primary">
+        <i data-feather="chevron-right" class="float-start"></i>
+        Saisir/valider
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          81
+        </span>
+      </a>
+      <a href="evalues.html" class="btn btn-outline-primary">
+        <i data-feather="chevron-right" class="float-start"></i>
+        Consulter
+      </a>
+    </p>
+
+    <h2 class="mb-0">
+      <i data-feather="poste-it"></i>
+      Fiche de poste
+    </h2>
+
+    <p class="text-muted">
+      <small><em>Actuellement ouvert uniquement aux utilisateurs de test.</em></small>
+    </p>
+
+    <p>
+      <a href="evalues.html" class="btn btn-outline-primary">
+        <i data-feather="chevron-right" class="float-start"></i>
+        Saisir/valider
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          39
+        </span>
+      </a>
+      <a href="evalues.html" class="btn btn-outline-primary">
+        <i data-feather="chevron-right" class="float-start"></i>
+        Consulter
+      </a>
+    </p>
+
+  </div>
+</main>
+
+@@include('--app-partials/footer.html')
