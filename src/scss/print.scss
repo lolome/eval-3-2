@@ -3,3 +3,133 @@
  *  PRINT / PDF
  * - - - - - - - - - - - - - - - - - - - - -
  */
+
+
+html {
+
+  font-size: 9pt;
+
+}
+
+body.eval,
+body.postit {
+
+  max-width: 21cm;
+
+  font-size: 9pt;
+
+  background-image: none;
+  background: #ccc;
+  color: #000;
+
+  .app {
+
+    display: block;
+
+    background-image: none;
+
+  }
+
+  .app-header,
+  .app-menu,
+  .app-footer {
+
+    display: none!important;
+
+  }
+
+  .app-main {
+
+    flex: none;
+
+    background: none;
+
+  }
+
+  .app-content {
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1cm 1.5cm;
+    padding-left: 2cm;
+
+
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+
+  }
+
+  .eval-header,
+  .postit-header {
+
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    margin-top: .25cm;
+    margin-bottom: 1cm;
+
+    .row {
+
+      display: table-row;
+      margin: 0;
+
+    }
+
+    .col {
+
+      display: table-cell;
+      padding: 0;
+      vertical-align: top;
+
+    }
+
+    .col:first-child {
+
+      padding-right: 1.5cm;
+
+    }
+
+    .col:last-child {
+
+      padding-left: .5cm;
+
+    }
+
+  }
+
+  .eval-content,
+  .postit-content {
+
+    h1 {
+
+      font-size: 1.8rem;
+
+    }
+
+    section {
+
+      // outline: 1px dotted #f00;
+
+    }
+
+  }
+
+  .eval-footer,
+  .postit-footer {
+
+    display: none;
+
+  }
+
+  a {
+
+    text-decoration: none;
+
+    color: inherit!important;
+
+  }
+
+}
